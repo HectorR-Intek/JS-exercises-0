@@ -1,0 +1,30 @@
+.container1{
+    display: flex;
+}
+
+.image{
+    margin: 1em;
+    scale: 90%;
+    float: left;
+}
+
+.images-column{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+}
+
+.text-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+}
+
+.image2{
+    float: left;
+    margin: 1%;
+}

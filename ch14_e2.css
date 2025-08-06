@@ -1,0 +1,14 @@
+body{
+    background-color: azure;
+}
+
+form{
+    background-color: rgb(235, 234, 234);
+    border: solid black 1pt;
+    width: max-content;
+}
+
+#container{
+    margin-top: 3%;
+    column-count: 3;
+}

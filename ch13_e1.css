@@ -1,0 +1,22 @@
+body{
+    background-color: rgb(177, 235, 235);
+}
+
+.container{
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content:center;
+    
+}
+
+.divNumber{
+    background-color: rgb(249, 248, 248);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 1pt black;
+    /*padding: 50pt;*/
+    flex-basis: 19%;
+    min-height: 70pt;
+}

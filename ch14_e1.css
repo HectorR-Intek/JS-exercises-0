@@ -1,0 +1,14 @@
+body{
+    background-color: azure;
+}
+
+table{
+    table-layout: fixed;
+    width: 100%;
+}
+
+td{
+    border: solid black 1pt;
+    height: 80px;
+    text-align: center;
+}

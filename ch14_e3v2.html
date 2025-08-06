@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chapter 14, exercise 3</title>
+    <link  rel="stylesheet" href="ch14_e3.css">
+</head>
+<body>
+    <h2>Chapter 14, exercise 3</h2>
+    <button onclick= 'showTemplate("template1")'>Template 1</button>
+    <button onclick='showTemplate("template2")'>Template 2</button>
+
+    <div id="contentContainer">
+        
+
+    </div>
+    
+    <template id="template1">
+        <div class="row">
+            <div class="images-column"></div>
+            <div class="text-column"></div>
+        </div>
+    </template>
+
+  <!-- TEMPLATE 2: imagen y texto abajo -->
+  <template id="template2">
+    <div class="container2">
+      
+      <img src="" alt="Imagen desde JSON"  class = "image2"/>
+      <h3></h3>
+      <a onclick="showTemplate('template1')" href="#">To template 1:</a>
+      <p></p>
+    </div>
+  </template>
+
+
+
+    
+    
+
+    <script src="ch14_e3v2.js"></script>
+</body>
+</html>
