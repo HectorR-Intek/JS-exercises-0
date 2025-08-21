@@ -1,35 +1,42 @@
-//Chapter 14 exercise 1
+// Chapter 14 exercise 1
 "use strict";
+
 const rowsInput = document.getElementById("rows");
 const colsInput = document.getElementById("cols");
 const button = document.getElementById("button");
+const table = document.getElementById("table");
 
-button.addEventListener("click", ()=>{
-    let rows = rowsInput.value;
-    let cols = colsInput.value;
-    changeLayout(rows, cols);
+button.addEventListener("click", () => {
+  const rows = parseInt(rowsInput.value, 10) || 0;
+  const cols = parseInt(colsInput.value, 10) || 0;
+  changeLayout(rows, cols);
 });
 
-function addRow(index){
-    const newRow = document.createElement("tr");
-    const table = document.getElementById("table");
-    table.appendChild(newRow);
+function addRow(parent) {
+  const tr = document.createElement("tr");
+  parent.appendChild(tr);
+  return tr;
 }
 
-function addCol(index){
-    const newCol = document.createElement("td");
-    const newContent = document.createTextNode(index);
-    newCol.appendChild(newContent);
-    const lastRow = document.querySelector("tr:last-child");
-    lastRow.appendChild(newCol);
+function addCell(rowEl, content) {
+  const td = document.createElement("td");
+  td.textContent = content;
+  rowEl.appendChild(td);
 }
 
-function changeLayout(rows, cols){
-    table.innerHTML= "";
-    for(let i = 0; i<rows; i++){
-        addRow(i);
-        for(let j = 0; j<cols; j++){
-            addCol(j);
-        }
+function changeLayout(rows, cols) {
+  table.replaceChildren();
+
+  if (rows <= 0 || cols <= 0) return;
+
+  const frag = document.createDocumentFragment();
+
+  for (let i = 0; i < rows; i++) {
+    const tr = addRow(frag);
+    for (let j = 0; j < cols; j++) {
+      addCell(tr, j);
     }
+  }
+
+  table.appendChild(frag);
 }

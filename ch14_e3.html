@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chapter 14, exercise 3</title>
+  <link href="ch14_e3.css" rel="stylesheet"/>
+</head>
+<body>
+  <h2>Chapter 14, exercise 3</h2>
+
+  
+  <a href="#/">Template 1</a>
+  <a href="#/article/1">Template 2</a>
+
+  <div id="contentContainer"></div>
+
+  
+  <template id="template1">
+    <div class="container1">
+      <div class="article-list-wrap">
+        <ul class="article-list"></ul>
+      </div>
+    </div>
+  </template>
+
+  
+  <template id="template2">
+    <div class="container2">
+      <a class="back-link" href="#/">Back to Template 1</a>
+      <img class="image article-image" alt=""/>
+      <h3 class="article-title"></h3>
+      <p class="article-body"></p>
+    </div>
+  </template>
+
+  
+  <template id="article-card">
+    <li class="article-item">
+      <img class="image article-thumb" alt=""/>
+      <div class="article-meta">
+        <h4 class="article-title"></h4>
+        <p class="article-snippet"></p>
+      </div>
+    </li>
+  </template>
+
+  <script src="ch14_e3.js"></script>
+</body>
+</html>

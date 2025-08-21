@@ -1,9 +1,9 @@
 // add recursively
 "use strict"
-function addRec(arr){
-    if(arr.length == 0) return 0;
+function addRec(arr, index = 0){
+    if(arr.length == index) return 0;
     else{
-        return arr[0] + addRec(arr.slice(1));
+        return arr[index] + addRec(arr, index+1);
     }
 }
 

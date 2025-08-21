@@ -6,8 +6,8 @@ function control(){
 
     return function(){
         unitsOfFifteen++;
+        if(unitsOfFifteen == 11) unitsOfFifteen =  1;
         caller(unitsOfFifteen);
-        if(unitsOfFifteen == 5) unitsOfFifteen = 0;
         return;
     }
 }
@@ -25,19 +25,26 @@ function seventyfive(){
     }
 
 function caller(n){
-    switch(n){
-        case 2:
-            thirty();
-            break;
-        case 4:
-            sixty();
-            break;
-        case 5:
-            seventyfive();
-            break;
-        default:
-            return;
-    }   
+    const divisors = [2,4,5];
+
+    for(let divisor of divisors){
+        if(n%divisor==0){
+            switch(divisor){
+            case 2:
+                thirty();
+                break;
+            case 4:
+                sixty();
+                break;
+            case 5:
+                seventyfive();
+                break;
+            default:
+                return;
+            }
+        }
+    }
+    
 }
 
 const controlFn = control();

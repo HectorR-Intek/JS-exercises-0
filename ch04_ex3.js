@@ -1,10 +1,10 @@
 //Custom object that holds only numbers
 "use strict";
-class onlyNumber{
+class NumberValue{
     #value;                 // Value is defined as private so it cannot be redefined 
                             // without validation.
     constructor(){
-        this.#value = 1;
+        this.#value = 0;
     }
     get value(){
         return this.#value;
@@ -17,7 +17,7 @@ class onlyNumber{
     }
 }
 
-let aNumber = new onlyNumber();
+let aNumber = new NumberValue();
 console.log(aNumber.value);
 aNumber.newNumber = 5;
 console.log(aNumber.value);

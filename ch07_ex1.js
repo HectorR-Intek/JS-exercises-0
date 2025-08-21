@@ -2,14 +2,14 @@
 //  Using regular expressions:
 "use strict";
 function hexToRGB(hex){
-    const hexRegex = /^#([0-9a-fA-F]{2})([0-9a-fA-F]{2})([0-9a-fA-F]{2})$/;
+    const hexRegex = /^#([0-9a-f]{2})([0-9a-f]{2})([0-9a-f]{2})$/i;
     const found = hex.match(hexRegex);
 
     const r = parseInt(found[1], 16);
     const g = parseInt(found[2], 16);
     const b = parseInt(found[3], 16);
 
-    return {r, g, b};
+    return `rgb(${r},${g},${b})`;
 }
 
 const num1 = "#3043AA";

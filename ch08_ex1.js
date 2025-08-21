@@ -4,10 +4,9 @@
 
 function displayer(){
     function post(){
-        console.log("Every minute we get this message");
+        console.log(`Amount of milliseconds since midnight January 1, 1970: ${Date.now()}`);
     }
-    setInterval(post, 6000);
-
+    setInterval(post, 60000);
 }
 
 displayer();

@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Red Square",
+    "image": "red.png",
+    "snippet": "A short text about the red square.",
+    "body": "Full body text for the red square article. It has more details and examples."
+  },
+  {
+    "id": 2,
+    "title": "Yellow Square",
+    "image": "yellow.png",
+    "snippet": "Why the yellow square is interesting.",
+    "body": "Full body text for the yellow square article."
+  },
+  {
+    "id": 3,
+    "title": "Blue Square",
+    "image": "blue.png",
+    "snippet": "Meet the blue square.",
+    "body": "Full body text for the blue square article."
+  }
+]

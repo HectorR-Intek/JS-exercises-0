@@ -5,6 +5,9 @@ function MyMath(){
         return result;
     }
     this.mul = function(...numbers){
+        if(numbers.length === 0){
+            return 0;
+        }
         let result = numbers.reduce((acc,curr)=> acc*curr, 1);
         return result;
     }
@@ -20,3 +23,4 @@ const myMath = new MyMath();
 console.log(myMath.add(1,2,3,4));
 console.log(myMath.mul(3,4,5));
 console.log(myMath.fact(5));
+console.log(myMath.mul());

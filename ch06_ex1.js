@@ -3,35 +3,35 @@
 class Shape{
     constructor(edges, type = "Regular polygon"){
         this.edges = edges;
-        this.type = type || type;
+        this.type = type;
     }
     display(){
         return `The ${this.type} has ${this.edges} edges`;
     }
     area(){
-        return "More information is needed to calculate the area";
+        throw new Error("Unimplemented method");
     }
     perimeter(){
-        return "More information is needed to calculate the perimeter";
+        throw new Error("Unimplemented method");
     }
 }
 
 class Circle extends Shape{
     constructor(radius){
-        super("Circle");
+        super(0, "Circle");
         this.radius = radius;
     }
     area(){
-        return `The area is: ${Math.PI*this.radius*this.radius}`;
+        return Math.PI*this.radius*this.radius;
     }
     perimeter(){
-        return `The perimeter is: ${Math.PI*2*this.radius}`;
+        return Math.PI*2*this.radius;
     }
 }
 
 class Quadrilateral extends Shape{
     constructor(width, height){
-        super("Quadrilateral");
+        super(4, "Quadrilateral");
         this.width = width;
         this.height = height;
     }
@@ -45,7 +45,7 @@ class Quadrilateral extends Shape{
 
 class Triangle extends Shape{
     constructor(base, height){
-        super("Triangle");
+        super(3, "Triangle");
         this.base = base;
         this.height = height;
     }
@@ -57,7 +57,7 @@ class Triangle extends Shape{
 const heptagon = new Shape(7, "Heptagon");
 console.log(heptagon.display());
 
-const circleOne = new Circle(1, "Circle", 0);
+const circleOne = new Circle(1);
 console.log(circleOne.area());
 
 const square = new Quadrilateral(5, 5);
@@ -80,7 +80,7 @@ class Dog extends Animal{
         super(species, 4);
     }
     makeSound(){
-        return `The dog barks`;
+        return `The ${this.species} barks`;
     }
 }
 
@@ -89,7 +89,7 @@ class Cat extends Animal{
         super(species, 4);
     }
     makeSound(){
-        return `The cat meows`;
+        return `The ${this.species} meows`;
     }
 }
 
@@ -98,7 +98,7 @@ class Duck extends Animal{
         super(species, 2);
     }
     makeSound(){
-        return `The duck quacks`;
+        return `The ${this.species} quacks`;
     }
 }
 

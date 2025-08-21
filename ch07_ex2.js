@@ -25,7 +25,7 @@ function usToBrazil(usDate){
         if(brazilianHolidays[day]) return `${brazilianDate} (${brazilianHolidays[day]})`
         return brazilianDate;
     }
-    return "Input must be a date in U.S. format: MM/DD/YYYY."
+    throw new Error("Input must be a date in U.S. format: MM/DD/YYYY.");
     
 }
 
